@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main Card */
+.card {
+  background-color: white;
+  padding: 25px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 70px;
+}
+
+/* Heading */
+h1 {
+  color: #333;
+  font-size: 28px;
+}
+
+/* Rules List */
+.rules {
+  list-style: none;
+  padding: 0;
+}
+
+.rules li {
+  background-color: #eee;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  color: blueviolet;
+  font-weight: bold;
+}
