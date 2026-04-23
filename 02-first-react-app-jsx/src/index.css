@@ -1,0 +1,13 @@
+/* Apply styles to full webpage body */
+body {
+
+  /* Set background color of page */
+  background-color: blueviolet;
+
+  /* Set text color */
+  color: black;
+
+  /* Set font style for text */
+  font-family: sans-serif;
+
+}
