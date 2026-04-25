@@ -1,16 +1,211 @@
-# React + Vite
+# 🚀 React Day-05 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Day-05 of my React Journey** 🎯
+Today I learned **Props**, **Reusable Components**, **Props Destructuring**, and how React builds dynamic UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📚 Topics Covered
 
-## React Compiler
+* What are Props
+* Passing Data Parent to Child
+* Reusable Components
+* Props Destructuring
+* Dynamic UI with Props
+* Project Structure
+* CSS Concepts Used
+* Why Props are Important
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 What are Props?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Props = Properties**
+
+Props are used to pass data from **Parent Component** to **Child Component**.
+
+### Example
+
+```jsx id="rd51"
+<RecipeCard RecipeName="Dosa" />
+```
+
+Here:
+
+* `RecipeCard` = Child Component
+* `RecipeName="Dosa"` = Prop
+
+Props make components dynamic.
+
+---
+
+## 📌 Parent to Child Communication
+
+```text id="rd52"
+main.jsx  → Parent
+Recipe.jsx → Child
+```
+
+Parent sends data:
+
+```jsx id="rd53"
+<RecipeCard RecipeName="Tea" Time="10 min" />
+```
+
+Child receives:
+
+```jsx id="rd54"
+function RecipeCard(props) {
+  return <h1>{props.RecipeName}</h1>;
+}
+```
+
+---
+
+## 📌 Reusable Components
+
+Write once, use many times.
+
+```jsx id="rd55"
+<RecipeCard RecipeName="Tea" />
+<RecipeCard RecipeName="Coffee" />
+<RecipeCard RecipeName="Dosa" />
+```
+
+Same design, different data.
+
+---
+
+## 📌 Props Destructuring
+
+Instead of:
+
+```jsx id="rd56"
+function RecipeCard(props)
+```
+
+Use:
+
+```jsx id="rd57"
+function RecipeCard({ RecipeName, Time, serving })
+```
+
+Then directly use:
+
+```jsx id="rd58"
+<h1>{RecipeName}</h1>
+<p>{Time}</p>
+```
+
+### Benefits
+
+✔ Cleaner Code
+✔ Easy to Read
+✔ Less Typing
+✔ Professional Style
+
+---
+
+## 🍽️ Mini Project Built
+
+# Recipe Menu Card App
+
+Recipes Included:
+
+* ☕ Masala Chai
+* 🥞 Dosa
+* 🍛 Biryani
+* 🍨 Ice Cream
+
+Each card shows:
+
+✔ Image
+✔ Recipe Name
+✔ Time
+✔ Serving
+✔ Difficulty
+✔ Type
+✔ Chef Name
+
+---
+
+## 📌 main.jsx
+
+```jsx id="rd59"
+<RecipeCard RecipeName="Masala Chai" />
+<RecipeCard RecipeName="Dosa" />
+<RecipeCard RecipeName="Biryani" />
+<RecipeCard RecipeName="Ice Cream" />
+```
+
+---
+
+## 📌 Recipe.jsx
+
+```jsx id="rd510"
+function RecipeCard({ RecipeName }) {
+  return <h1>{RecipeName}</h1>;
+}
+```
+
+---
+
+## 🎨 CSS Concepts Used
+
+* Flexbox
+* Gap
+* Card Layout
+* Hover Effects
+* Border Radius
+* Box Shadow
+* Responsive Design
+
+---
+
+## 📁 Project Structure
+
+```bash id="rd511"
+src/
+│── main.jsx
+│── Recipe.jsx
+│── index.css
+```
+
+---
+
+## 💡 What I Learned Today
+
+✔ Props pass data
+✔ Parent → Child communication
+✔ Components become reusable
+✔ Dynamic UI building
+✔ Better project structure
+✔ Clean coding style
+
+---
+
+## 🚀 Why Props Important?
+
+Used in real projects:
+
+* Netflix Movie Cards
+* Amazon Product Cards
+* YouTube Video Cards
+* Student Cards
+* Food Menu Apps
+
+---
+
+## 🚀 Next Topic
+
+➡️ **Rendering Arrays in React**
+
+---
+
+## ⭐ Support
+
+If this repository helped you, give it a **Star ⭐**
+
+---
+
+## ✅ Day-05 Completed Successfully
